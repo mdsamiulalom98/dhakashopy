@@ -24,131 +24,105 @@
         <!-- end page title -->
 
         <div class="row">
-            <div class="col-md-6 col-xl-4">
+            <div class="col-md-6 col-xl-3">
                 <div class="widget-rounded-circle card">
-                    <div class="card-body bg-dark">
-                        <div class="row">
-
-                            <div class="col-12">
-                                <div class="text-start">
-                                    <p class="text-white mb-1 text-truncate">Total Sales</p>
-                                    <h3 class="text-white mt-1 taka-sign"><span
-                                            data-plugin="counterup">{{ $total_sale}}</span></h3>
+                    <div class="card-body">
+                        <a href="{{ route('admin.orders', 'all') }}">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="avatar-lg rounded-circle bg-soft-primary border-primary border">
+                                        <i class="fe-shopping-cart font-22 avatar-title text-primary"></i>
+                                    </div>
                                 </div>
-                            </div>
-                        </div> <!-- end row-->
-                    </div>
-                </div> <!-- end widget-rounded-circle-->
-            </div> <!-- end col-->
-            <div class="col-md-6 col-xl-4">
-                <div class="widget-rounded-circle card">
-                    <div class="card-body bg-dark">
-                        <div class="row">
-
-                            <div class="col-12">
-                                <div class="text-start">
-                                    <p class="text-white mb-1 text-truncate">This Month Sales</p>
-                                    <h3 class="text-white mt-1 taka-sign"><span
-                                            data-plugin="counterup">{{ $current_month_sale}}</span></h3>
+                                <div class="col-6">
+                                    <div class="text-end">
+                                        <h3 class="text-dark mt-1"><span data-plugin="counterup">{{ $total_order }}</span>
+                                        </h3>
+                                        <p class="text-muted mb-1 text-truncate">Total Order</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </div> <!-- end row-->
-                    </div>
-                </div> <!-- end widget-rounded-circle-->
-            </div> <!-- end col-->
-            <div class="col-md-6 col-xl-4">
-                <div class="widget-rounded-circle card">
-                    <div class="card-body bg-dark">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="text-start">
-                                    <p class="text-white mb-1 text-truncate">Today Sales </p>
-                                    <h3 class="text-white mt-1 taka-sign"><span
-                                            data-plugin="counterup">{{ $today_sales}}</span></h3>
-                                </div>
-                            </div>
-                        </div> <!-- end row-->
+                            </div> <!-- end row-->
+                        </a>
                     </div>
                 </div> <!-- end widget-rounded-circle-->
             </div> <!-- end col-->
 
-            <div class="col-md-6 col-xl-4">
+            <div class="col-md-6 col-xl-3">
                 <div class="widget-rounded-circle card">
-                    <div class="card-body bg-dark">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="text-start">
-                                    <p class="text-white mb-1 text-truncate">Total Order</p>
-                                    <h3 class="text-white mt-1"><span data-plugin="counterup">{{ $total_order }}</span></h3>
+                    <div class="card-body">
+                        <a href="{{ route('admin.orders', 'pending') }}">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="avatar-lg rounded-circle bg-soft-success border-success border">
+                                        <i class="fe-shopping-bag font-22 avatar-title text-success"></i>
+                                    </div>
                                 </div>
-                            </div>
-                        </div> <!-- end row-->
+                                <div class="col-6">
+                                    <div class="text-end">
+                                        <h3 class="text-dark mt-1"><span data-plugin="counterup">{{ $today_order }}</span>
+                                        </h3>
+                                        <p class="text-muted mb-1 text-truncate">Today's Order</p>
+                                    </div>
+                                </div>
+                            </div> <!-- end row-->
+                        </a>
                     </div>
                 </div> <!-- end widget-rounded-circle-->
             </div> <!-- end col-->
 
-            <div class="col-md-6 col-xl-4">
+            <div class="col-md-6 col-xl-3">
                 <div class="widget-rounded-circle card">
-                    <div class="card-body bg-dark">
-                        <div class="row">
-
-                            <div class="col-12">
-                                <div class="text-start">
-                                    <p class="text-white mb-1 text-truncate">This Month Orders</p>
-                                    <h3 class="text-white mt-1"><span
-                                            data-plugin="counterup">{{ $current_month_order }}</span></h3>
+                    <div class="card-body">
+                        <a href="{{ route('products.index') }}">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="avatar-lg rounded-circle bg-soft-info border-info border">
+                                        <i class="fe-database font-22 avatar-title text-info"></i>
+                                    </div>
                                 </div>
-                            </div>
-                        </div> <!-- end row-->
+                                <div class="col-6">
+                                    <div class="text-end">
+                                        <h3 class="text-dark mt-1"><span data-plugin="counterup">{{ $total_product }}</span>
+                                        </h3>
+                                        <p class="text-muted mb-1 text-truncate">Products</p>
+                                    </div>
+                                </div>
+                            </div> <!-- end row-->
+                        </a>
                     </div>
                 </div> <!-- end widget-rounded-circle-->
             </div> <!-- end col-->
 
-            <div class="col-md-6 col-xl-4">
+            <div class="col-md-6 col-xl-3">
                 <div class="widget-rounded-circle card">
-                    <div class="card-body bg-dark">
-                        <div class="row">
-
-                            <div class="col-12">
-                                <div class="text-start">
-                                    <p class="text-white mb-1 text-truncate">Customer</p>
-                                    <h3 class="text-white mt-1"><span data-plugin="counterup">{{ $total_customer }}</span>
-                                    </h3>
+                    <div class="card-body">
+                        <a href="{{ route('customers.index') }}">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="avatar-lg rounded-circle bg-soft-warning border-warning border">
+                                        <i class="fe-user font-22 avatar-title text-warning"></i>
+                                    </div>
                                 </div>
-                            </div>
-                        </div> <!-- end row-->
+                                <div class="col-6">
+                                    <div class="text-end">
+                                        <h3 class="text-dark mt-1"><span
+                                                data-plugin="counterup">{{ $total_customer }}</span></h3>
+                                        <p class="text-muted mb-1 text-truncate">Customer</p>
+                                    </div>
+                                </div>
+                            </div> <!-- end row-->
+                        </a>
                     </div>
                 </div> <!-- end widget-rounded-circle-->
             </div> <!-- end col-->
         </div>
         <!-- end row-->
 
-        <div class="row">
-            @foreach ($order_statuses as $key => $status)
-                <div class="col-md-6 col-xl-2">
-                    <div class="widget-rounded-circle card">
-                        <div class="card-body bg-dark">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="text-start">
-                                        <h3 class="text-white mt-1"><span
-                                                data-plugin="counterup">{{ $status->orders_count }}</span></h3>
-                                        <p class="text-white mb-1 text-truncate">{{ $status->name }}</p>
-                                    </div>
-                                </div>
-                            </div> <!-- end row-->
-                        </div>
-                    </div> <!-- end widget-rounded-circle-->
-                </div> <!-- end col-->
-            @endforeach
-
-        </div>
 
         <div class="row">
             <div class="col-xl-6">
                 <div class="card">
                     <div class="card-body">
-
                         <h4 class="header-title mb-3">Latest 5 Orders</h4>
 
                         <div class="table-responsive">
@@ -168,13 +142,10 @@
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
                                             <td style="width: 36px;">
-                                                @if($order->product)
-                                                <img src="{{ asset($order->product->image ? $order->product->image->image : '') }}"
+                                                <img src="{{ asset($order->product->image ?? '') }}"
                                                     alt="contact-img" title="contact-img"
                                                     class="rounded-circle avatar-sm" />
-                                                @endif
                                             </td>
-
                                             <td>
                                                 {{ $order->invoice_id }}
                                             </td>
@@ -187,7 +158,7 @@
                                                 {{ $order->customer ? $order->customer->name : '' }}
                                             </td>
                                             <td>
-                                                {{ $order->status?$order->status->name : '' }}
+                                                {{ $order->status ? $order->status->name : '' }}
                                             </td>
                                         </tr>
                                     @endforeach
@@ -254,4 +225,105 @@
 @section('script')
     <!-- Plugins js-->
     <script src="{{ asset('public/backEnd/') }}/assets/libs/flatpickr/flatpickr.min.js"></script>
+    <script src="{{ asset('public/backEnd/') }}/assets/libs/apexcharts/apexcharts.min.js"></script>
+    <script src="{{ asset('public/backEnd/') }}/assets/libs/selectize/js/standalone/selectize.min.js"></script>
+
+    <script>
+        var colors = ["#f1556c"],
+            dataColors = $("#total-revenue").data("colors");
+        dataColors && (colors = dataColors.split(","));
+        var options = {
+
+                chart: {
+                    height: 242,
+                    type: "radialBar"
+                },
+                plotOptions: {
+                    radialBar: {
+                        hollow: {
+                            size: "65%"
+                        }
+                    }
+                },
+                colors: colors,
+                labels: ["Delivery"]
+            },
+            chart = new ApexCharts(document.querySelector("#total-revenue"), options);
+        chart.render();
+        colors = ["#1abc9c", "#4a81d4"];
+        (dataColors = $("#sales-analytics").data("colors")) && (colors = dataColors.split(","));
+        options = {
+            series: [{
+                name: "Revenue",
+                type: "column",
+                data: [
+                    @foreach ($monthly_sale as $sale)
+                        {{ $sale->amount }},
+                    @endforeach
+                ]
+            }, {
+                name: "Sales",
+                type: "line",
+                data: [
+                    @foreach ($monthly_sale as $sale)
+                        {{ $sale->amount }},
+                    @endforeach
+                ]
+            }],
+            chart: {
+                height: 378,
+                type: "line",
+            },
+            stroke: {
+                width: [2, 3]
+            },
+            plotOptions: {
+                bar: {
+                    columnWidth: "50%"
+                }
+            },
+            colors: colors,
+            dataLabels: {
+                enabled: !0,
+                enabledOnSeries: [1]
+            },
+            labels: [
+                @foreach ($monthly_sale as $sale)
+                    {{ date('d', strtotime($sale->date)) }} + '-' + {{ date('m', strtotime($sale->date)) }} +
+                        '-' + {{ date('Y', strtotime($sale->date)) }},
+                @endforeach
+            ],
+            legend: {
+                offsetY: 7
+            },
+            grid: {
+                padding: {
+                    bottom: 20
+                }
+            },
+            fill: {
+                type: "gradient",
+                gradient: {
+                    shade: "light",
+                    type: "horizontal",
+                    shadeIntensity: .25,
+                    gradientToColors: void 0,
+                    inverseColors: !0,
+                    opacityFrom: .75,
+                    opacityTo: .75,
+                    stops: [0, 0, 0]
+                }
+            },
+            yaxis: [{
+                title: {
+                    text: "Net Revenue"
+                }
+            }]
+        };
+        (chart = new ApexCharts(document.querySelector("#sales-analytics"), options)).render(), $("#dash-daterange")
+            .flatpickr({
+                altInput: !0,
+                mode: "range",
+            });
+    </script>
 @endsection

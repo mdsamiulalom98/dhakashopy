@@ -246,12 +246,12 @@
                                                         <div class="d-flex single_product col-sm-12">
                                                             <input type="submit" data-id="{{ $details->id }}" class="btn px-4 add_cart_btn" id="add_to_cart"
                                                                 onclick="return sendSuccess();" name="add_cart"
-                                                                value="Add to Cart" />
+                                                                value="কার্টে রাখুন" />
 
                                                             <input type="submit"
                                                                 class="btn px-4 order_now_btn order_now_btn_m"
                                                                 onclick="return sendSuccess();" name="order_now"
-                                                                value="Order Now" id="order_now"/>
+                                                                value="অর্ডার করুন " id="order_now"/>
                                                         </div>
                                                     </div>
                                                     <div class="mt-md-2 mt-2">
@@ -622,9 +622,9 @@
             }
         });
     </script>
-    
-    
-    
+
+
+
 <!--    <script type="text/javascript">-->
 <!--    $(document).ready(function() {-->
 <!--        $('#add_to_cart').click(function() {-->
@@ -647,9 +647,9 @@
 <!--    });-->
 <!--</script>-->
 
-    
-    
-    
+
+
+
     <!--<script type="text/javascript">-->
     <!--    $(document).ready(function() {-->
     <!--        $('#order_now').click(function() {-->
@@ -806,9 +806,9 @@
             }
         });
     </script>
-    
+
    <!--Microdata -->
-   
+
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -838,6 +838,6 @@
     "value": "{{$details->name}}"
   }]
 }
-</script> 
-    
+</script>
+
 @endpush

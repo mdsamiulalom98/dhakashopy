@@ -16,8 +16,7 @@ return new class extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('slug');
-            $table->integer('parent_id')->default('0');
+            $table->string('slug')->index();
             $table->string('image')->default('public/uploads/category/default.png');
             $table->string('meta_title')->nullable();
             $table->text('meta_decription')->nullable();

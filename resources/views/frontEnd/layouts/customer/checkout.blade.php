@@ -1,5 +1,10 @@
 @extends('frontEnd.layouts.master') @section('title', 'Customer Checkout') @push('css')
 <link rel="stylesheet" href="{{ asset('public/frontEnd/css/select2.min.css') }}" />
+<style>
+    * {
+        font-family: "Hind Siliguri", sans-serif;
+    }
+</style>
 @endpush @section('content')
 <section class="chheckout-section">
     @php
@@ -16,11 +21,10 @@
                 <div class="checkout-shipping">
                     <div class="card">
                         <div class="card-header">
-                            <h4>Fill in the information to confirm your order <span style="color:#fe5200;"> "Place
-                                    Order" </span>
-                                Click the button or call this number to order by phone
-                                <a style="color:#fe5200;" Click on
-                                    href="tel:{{ $contact->hotline }}">{{ $contact->hotline }}</a>.
+
+                            <h4 class="hind-siliguri">
+                                অর্ডার করতে আপনার নাম মোবাইল নম্বর এবং আপনার বিস্তারিত ঠিকানা দিয়ে <br> <span
+                                    style="color:#fe5200;"> অর্ডার কনফার্ম করুন </span>বাটনে ক্লিক করুন।
                             </h4>
 
                         </div>
@@ -31,11 +35,11 @@
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <div class="form-group customized-input-box mb-4">
-                                            <label for="name">Your Name *</label>
+                                            <label for="name" class="hind-siliguri">আপনার নাম লিখুন *</label>
                                             <span class="input-icon-label">
                                                 <i class="fa fa-user"></i>
                                             </span>
-                                            <input type="text" placeholder ="Name" id="name"
+                                            <input type="text"  id="name"
                                                 class="form-control @error('name') is-invalid @enderror" name="name"
                                                 value="{{ old('name') }}" required />
                                             @error('name')
@@ -48,11 +52,11 @@
                                     <!-- col-end -->
                                     <div class="col-sm-12">
                                         <div class="form-group customized-input-box mb-4">
-                                            <label for="phone">Phone Number*</label>
+                                            <label for="phone" class="hind-siliguri">মোবাইল নাম্বার দিন *</label>
                                             <span class="input-icon-label">
                                                 <i class="fa fa-phone"></i>
                                             </span>
-                                            <input placeholder ="Your Phone" type="text" minlength="11"
+                                            <input  type="text" minlength="11"
                                                 id="number" maxlength="11" pattern="0[0-9]+"
                                                 title="please enter number only and 0 must first character"
                                                 title="Please enter an 11-digit number." id="phone"
@@ -69,11 +73,11 @@
 
                                     <div class="col-sm-12">
                                         <div class="form-group customized-input-box mb-3">
-                                            <label for="email">Email (Optional)</label>
+                                            <label for="email" class="hind-siliguri">ইমেইল দিন (অপশনাল)</label>
                                             <span class="input-icon-label">
                                                 <i class="fa fa-envelope"></i>
                                             </span>
-                                            <input placeholder ="Email Address" type="email" id="email"
+                                            <input  type="email" id="email"
                                                 class="form-control @error('email') is-invalid @enderror" name="email"
                                                 value="{{ old('email') }}" />
                                             @error('email')
@@ -86,11 +90,11 @@
 
                                     <div class="col-sm-12">
                                         <div class="form-group customized-input-box mb-4">
-                                            <label for="address">Address*</label>
+                                            <label for="address" class="hind-siliguri">ঠিকানা লিখুন *</label>
                                             <span class="input-icon-label">
                                                 <i class="fa fa-map-location-dot"></i>
                                             </span>
-                                            <input placeholder ="Your Address" type="address" id="address"
+                                            <input type="address" id="address"
                                                 class="form-control @error('address') is-invalid @enderror"
                                                 name="address" value="{{ old('address') }}" required />
                                             @error('address')
@@ -104,7 +108,8 @@
 
                                     <div class="col-sm-12">
                                         <div class="form-group customized-input-box mb-4">
-                                            <label for="area">Select Delivery Area *</label>
+                                            <label for="area" class="hind-siliguri">ডেলিভারি এরিয়া নিবার্চন করুন
+                                                *</label>
                                             {{-- <select type="area" id="area"
                                                 class="form-control @error('area') is-invalid @enderror" name="area"
                                                 required>
@@ -171,7 +176,7 @@
                                     <div class="col-sm-12">
                                         @if (Session::get('free_shipping') != 1)
                                             <div class="radio_payment">
-                                                <label id="payment_method">PAYMENT METHOD</label>
+                                                <label id="payment_method" class="hind-siliguri">PAYMENT METHOD</label>
                                                 <div class="payment_option">
                                                 </div>
                                             </div>
@@ -179,8 +184,9 @@
                                         <div class="payment-methods">
                                             @if (Session::get('free_shipping') != 1)
                                                 <div class="form-check p_cash payment_method" data-id="cod">
-                                                    <input class="form-check-input" type="radio" name="payment_method"
-                                                        id="inlineRadio1" value="Cash On Delivery" checked required />
+                                                    <input class="form-check-input" type="radio"
+                                                        name="payment_method" id="inlineRadio1"
+                                                        value="Cash On Delivery" checked required />
                                                     <label class="form-check-label" for="inlineRadio1">
                                                         Cash On Delivery
                                                     </label>
@@ -236,7 +242,8 @@
                                         <button style=""
                                             onclick="event.preventDefault();
                                     document.getElementById('checkoutForm').submit();"
-                                            class="order_place custom-shake" type="submit">Order Now</button>
+                                            class="order_place custom-shake hind-siliguri" type="submit">অর্ডার
+                                            কনফার্ম করুন</button>
                                     </div>
                                 </div>
                             </div>
@@ -254,16 +261,16 @@
                 <div class="cart_details table-responsive-sm">
                     <div class="card">
                         <div class="card-header">
-                            <h5>ORDER DETAILS</h5>
+                            <h5 class="hind-siliguri">অর্ডারের তথ্য</h5>
                         </div>
                         <div class="card-body cartlist">
                             <table class="cart_table table table-bordered table-striped text-center mb-0">
                                 <thead>
                                     <tr>
-                                        <th style="width: 20%;">Delete</th>
-                                        <th style="width: 40%;">Product</th>
-                                        <th style="width: 20%;">Qty</th>
-                                        <th style="width: 20%;">Price</th>
+                                        <th style="width: 20%;">ডিলিট</th>
+                                        <th style="width: 40%;">প্রোডাক্ট</th>
+                                        <th style="width: 20%;">পরিমাণ</th>
+                                        <th style="width: 20%;">মূল্য</th>
                                     </tr>
                                 </thead>
 
@@ -303,28 +310,28 @@
                                 </tbody>
                                 <tfoot>
                                     <tr>
-                                        <th colspan="3" class="text-end px-4">Total</th>
+                                        <th colspan="3" class="text-end px-4">মোট</th>
                                         <td class="px-4">
                                             <span id="net_total"><span class="">৳
                                                 </span><strong>{{ $subtotal }}</strong></span>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th colspan="3" class="text-end px-4">Delevery Charge</th>
+                                        <th colspan="3" class="text-end px-4">ডেলিভারি চার্জ</th>
                                         <td class="px-4">
                                             <span id="cart_shipping_cost"><span class="">৳
                                                 </span><strong>{{ $shipping }}</strong></span>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th colspan="3" class="text-end px-4">Discount</th>
+                                        <th colspan="3" class="text-end px-4">ডিসকাউন্ট	</th>
                                         <td class="px-4">
                                             <span id="cart_shipping_cost"><span class="">৳
                                                 </span><strong>{{ $discount + $coupon }}</strong></span>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th colspan="3" class="text-end px-4">Total</th>
+                                        <th colspan="3" class="text-end px-4">সর্বমোট</th>
                                         <td class="px-4">
                                             <span id="grand_total"><span class="">৳
                                                 </span><strong>{{ $subtotal + $shipping - ($discount + $coupon) }}</strong></span>

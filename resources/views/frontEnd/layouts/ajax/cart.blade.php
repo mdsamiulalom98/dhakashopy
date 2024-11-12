@@ -14,10 +14,10 @@
 <table class="cart_table table table-bordered table-striped text-center mb-0">
     <thead>
         <tr>
-            <th style="width: 20%;">Delele</th>
-            <th style="width: 40%;">Product</th>
-            <th style="width: 20%;">Qty</th>
-            <th style="width: 20%;">Price</th>
+            <th style="width: 20%;">ডিলিট</th>
+            <th style="width: 40%;">প্রোডাক্ট</th>
+            <th style="width: 20%;">পরিমাণ</th>
+            <th style="width: 20%;">মূল্য</th>
         </tr>
     </thead>
 
@@ -25,10 +25,11 @@
         @foreach (Cart::instance('shopping')->content() as $value)
             <tr>
                 <td>
-                    <a class="cart_remove" data-id="{{ $value->rowId }}"><i class="fas fa-trash text-danger"></i></a>
+                    <a class="cart_remove" data-id="{{ $value->rowId }}"><i
+                            class="fas fa-trash text-danger"></i></a>
                 </td>
                 <td class="text-left">
-                    <a style="font-size: 14px;" href="{{ route('product', $value->options->slug) }}"> <img
+                    <a href="{{ route('product', $value->options->slug) }}"> <img
                             src="{{ asset($value->options->image) }}" />
                         {{ Str::limit($value->name, 20) }}</a>
                     @if ($value->options->product_size)
@@ -41,9 +42,11 @@
                 <td class="cart_qty">
                     <div class="qty-cart vcart-qty">
                         <div class="quantity">
-                            <button class="minus cart_decrement" data-id="{{ $value->rowId }}">-</button>
+                            <button class="minus cart_decrement"
+                                data-id="{{ $value->rowId }}">-</button>
                             <input type="text" value="{{ $value->qty }}" readonly />
-                            <button class="plus cart_increment" data-id="{{ $value->rowId }}">+</button>
+                            <button class="plus cart_increment"
+                                data-id="{{ $value->rowId }}">+</button>
                         </div>
                     </div>
                 </td>
@@ -54,28 +57,28 @@
     </tbody>
     <tfoot>
         <tr>
-            <th colspan="3" class="text-end px-4">Total</th>
+            <th colspan="3" class="text-end px-4">মোট</th>
             <td class="px-4">
                 <span id="net_total"><span class="">৳
                     </span><strong>{{ $subtotal }}</strong></span>
             </td>
         </tr>
         <tr>
-            <th colspan="3" class="text-end px-4">Delevery Charge</th>
+            <th colspan="3" class="text-end px-4">ডেলিভারি চার্জ</th>
             <td class="px-4">
                 <span id="cart_shipping_cost"><span class="">৳
                     </span><strong>{{ $shipping }}</strong></span>
             </td>
         </tr>
         <tr>
-            <th colspan="3" class="text-end px-4">Discount</th>
+            <th colspan="3" class="text-end px-4">ডিসকাউন্ট	</th>
             <td class="px-4">
                 <span id="cart_shipping_cost"><span class="">৳
                     </span><strong>{{ $discount + $coupon }}</strong></span>
             </td>
         </tr>
         <tr>
-            <th colspan="3" class="text-end px-4">Total</th>
+            <th colspan="3" class="text-end px-4">সর্বমোট</th>
             <td class="px-4">
                 <span id="grand_total"><span class="">৳
                     </span><strong>{{ $subtotal + $shipping - ($discount + $coupon) }}</strong></span>
@@ -83,18 +86,7 @@
         </tr>
     </tfoot>
 </table>
-<form
-    action="@if (Session::get('coupon_used')) {{ route('customer.coupon_remove') }} @else {{ route('customer.coupon') }} @endif"
-    class="checkout-coupon-form" method="POST">
-    @csrf
-    <div class="coupon">
-        <input type="text" name="coupon_code"
-            placeholder=" @if (Session::get('coupon_used')) {{ Session::get('coupon_used') }} @else Apply Coupon @endif"
-            class="border-0 shadow-none form-control" />
-        <input type="submit" value="@if (Session::get('coupon_used')) remove @else apply @endif "
-            class="border-0 shadow-none btn btn-theme" />
-    </div>
-</form>
+
 
 <script src="{{ asset('public/frontEnd/js/jquery-3.6.3.min.js') }}"></script>
 <!-- cart js start -->

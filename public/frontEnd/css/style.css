@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
 
 :root {
     --primary-color: #016661;
@@ -39,7 +40,9 @@ p {
 .alinur {
     font-family: "Alinur Banglaborno", sans-serif;
 }
-
+.hind-siliguri {
+    font-family: "Hind Siliguri", sans-serif;
+}
 button,
 button:focus,
 button:active {
@@ -891,7 +894,7 @@ li.Newsletter i {
 }
 
 .catagory_menu ul li a:hover {
-    color: #17b4ff !important;
+    color: #b5b5b5 !important;
 }
 
 .catagory_menu {
@@ -1519,7 +1522,7 @@ section.slider-section {
     border-radius: 3px;
     width: 50%;
     margin-left: 5px;
-    font-family: "Roboto";
+    font-family: 'Hind Siliguri', sans-serif;
     height: 45px;
     margin-top: 10px;
     border-radius: 0;
@@ -1547,7 +1550,7 @@ section.slider-section {
     height: 45px;
     margin-top: 10px;
     border-radius: 5px;
-    font-family: "Roboto";
+    font-family: 'Hind Siliguri', sans-serif;
     font-size: 18px;
 }
 
@@ -2501,10 +2504,9 @@ li.recent_pro {
 
 .card-header h4 {
     font-size: 16px;
+    line-height: 18px;
     font-weight: 600;
-    font-family: 'Roboto';
-    line-height: 26px;
-    text-align: center;
+    color: #016661;
 }
 
 .checkout-shipping h5, .cart_details h5 {
@@ -2521,7 +2523,6 @@ li.recent_pro {
 .checkout-shipping label {
     margin-bottom: 5px;
     font-size: 14px;
-    font-family: Roboto;
     font-weight: 600;
 }
 
@@ -3256,7 +3257,7 @@ i.fa-regular.fa-trash-can.trash_icon:hover {
     display: block;
     width: 100%;
     transition: all .5s ease;
-    border-radius: 54px;
+    border-radius: 5px;
 }
 
 .cart_btn a {

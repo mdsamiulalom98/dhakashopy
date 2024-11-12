@@ -485,7 +485,6 @@
         });
         // EjxYJRmpEIK,
         // User: hellodinajpur_dhakashopy
-
         // Database: hellodinajpur_dhakashopy_db
         $(".product-slider").owlCarousel({
             margin: 15,
