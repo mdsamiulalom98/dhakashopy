@@ -1,0 +1,36 @@
+[14-Apr-2024 00:48:07 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/edhakash/public_html/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/edhakash/public_html/config/cache.php on line 18
+[14-Apr-2024 00:48:09 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/edhakash/public_html/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/edhakash/public_html/config/cache.php on line 18
+[14-Apr-2024 00:53:18 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/edhakash/public_html/config/app.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/edhakash/public_html/config/app.php on line 18
+[14-Apr-2024 00:53:23 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/edhakash/public_html/config/app.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/edhakash/public_html/config/app.php on line 18
+[14-Apr-2024 00:56:52 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/edhakash/public_html/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/edhakash/public_html/config/cache.php on line 18
+[14-Apr-2024 00:57:05 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/edhakash/public_html/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/edhakash/public_html/config/cache.php on line 18
+[14-Apr-2024 01:01:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/edhakash/public_html/config/app.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/edhakash/public_html/config/app.php on line 18
+[14-Apr-2024 01:01:57 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/edhakash/public_html/config/app.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/edhakash/public_html/config/app.php on line 18
+[20-Aug-2024 16:12:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/ozybdcom/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/ozybdcom/public_html/config/database.php on line 18
